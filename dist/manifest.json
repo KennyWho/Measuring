@@ -1,0 +1,19 @@
+{
+    "name": "Measuring",
+    "description": "A chrome extension for web developing feature a grid line on web page.",
+    "author": "Kenny",
+    "manifest_version": 2,
+    "version": "1.0",
+    "browser_action": {
+        "default_icon": {
+            "32": "icon.jpg" // optional
+        },
+        "default_title": "Google Mail" // optional; shown in tooltip
+    },
+    "background" : {
+        "scripts" : ["background.js"]
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}
