@@ -52,12 +52,12 @@
                     td H
                     td 
                         strong Hide
-                        |  all line
+                        |  all lines
                 tr
                     td C
                     td 
                         strong Clean
-                        |  all line
+                        |  all lines
 
 </template>
 
@@ -78,7 +78,8 @@
     text-align: left;
     h5 {
         font-size: 18px;
-        margin-bottom: 15px;    
+        margin-top: 0;
+        margin-bottom: 15px;
     }
     table {
         width: 100%;
@@ -198,6 +199,7 @@
     transform: translate(-50%, -50%);
     h5 {
         font-size: 16px;
+        margin-top: 0;
         margin-bottom: 12px;
     }
 }

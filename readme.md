@@ -1,17 +1,17 @@
 # A chrome extension for web developing feature a grid line on web page.
 
-based on Vue, Jquery, lodash.
+Based on Vue, Jquery, lodash.
 
-build >
+Build >
 
 ```javascript
 npm install
 gulp js
 ```
 
-usage >
+Usage > dist.ctx
 
-Measuring.ctx
+[Webstore](https://chrome.google.com/webstore/detail/measuring/cibkjdgbiinfkjoikhmnjpcoidgfafob?utm_source=chrome-ntp-icon)
 
 Screenshot >
 
