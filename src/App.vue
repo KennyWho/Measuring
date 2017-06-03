@@ -62,6 +62,9 @@
 </template>
 
 <style lang="less">
+.ruler-user-select {
+    user-select: none;
+}
 .ruler-wrap {
     ul, li {
         list-style: none;
@@ -275,11 +278,22 @@
 }
 .ruler__line {
     position: absolute;
-    
     background-color: #4affff;
+    box-sizing: border-box;
+    &.active {
+        background-color: #E74C3C;
+    }
+    &:before {
+        position: absolute;
+        content: '';
+        width: 24px;
+        height: 24px;
+        background: url('data:image/png;base64,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') no-repeat;
+        background-size: 100%;
+    }
 }
 .ruler__line--x {
-    height: 1px;
+    height: 3px;
     width: 100%;
     left: 0;
     margin-top: -1px;
@@ -287,9 +301,15 @@
     border-bottom: 1px solid transparent;
     background-clip: content-box;
     cursor: row-resize;
+    padding: 0 24px 0 20px;
+    &:before {
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 }
 .ruler__line--y {
-    width: 1px;
+    width: 3px;
     height: 100%;
     top: 0;
     margin-left: -1px;
@@ -297,6 +317,12 @@
     border-right: 1px solid transparent;
     background-clip: content-box;
     cursor: col-resize;
+    padding: 20px 0 24px 0;
+    &:before {
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) rotate(-90deg);
+    }
 }
 .ruler-util--hidden {
     visibility: hidden;
@@ -311,6 +337,35 @@
     background-color: #282828;
     li {
         margin: 10px 0;
+    }
+}
+.ruler-distance {
+    position: absolute;
+    background-color: #E74C3C;
+    span {
+        position: absolute;
+    }
+}
+.ruler-distance--y {
+    width: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 5px;
+    }
+}
+.ruler-distance--x {
+    height: 1px;
+    top: 50%;
+    transform: translateY(-50%);
+    span {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 5px;
     }
 }
 </style>
@@ -480,11 +535,74 @@ module.exports = {
             lineY = $(this)
             dragY = true
         })
+        var startCoordinate
+        var endCoordinate
+        $(document).on('mousedown', '.ruler__line', function (e) {
+            $('.ruler__line').removeClass('active')
+            startCoordinate = {
+                x: e.pageX,
+                y: e.pageY
+            }
+        })
+        $(document).on('mouseup', '.ruler__line', function (e) {
+            endCoordinate = {
+                x: e.pageX,
+                y: e.pageY
+            }
+        })
+        function distance (a, b) {
+            return a.x - b.x === 0 && a.y - b.y === 0
+        }
+        // click
+        function createDistance (direction, distance, start) {
+            $('.ruler-distance').remove()
+            var directionClass = direction === 'x' ? 'ruler-distance--x' : 'ruler-distance--y'
+            var css = {}
+            if (direction === 'x') {
+                css.width = distance + 'px'
+                css.left = start + 'px'
+            } else {
+                css.height = distance + 'px'
+                css.top = start + 'px'
+            }
+            var ele = $('<div>').addClass('ruler-distance')
+                .addClass(directionClass)
+                .html('<span>' + distance + 'px' + '</span>')
+                .css(css)
+            $('.ruler-wrap').append(ele);
+        }
+        $(document).on('click', '.ruler__line', function (e) {
+            if (distance(startCoordinate, endCoordinate)) {
+                e.stopPropagation();
+                $('.ruler__line').removeClass('active')
+                $(this).addClass('active')
+            }
+        })
+        $(document).on('click', function (e) {
+            $('.ruler__line').removeClass('active')
+        })
         var active
         $(document).on('mouseover', '.ruler__line--x, .ruler__line--y', function (e) {
             active = $(this);
+            if (drag || dragY) {
+                return;
+            }
+            var target = $('.ruler__line.active')
+            var direction = $(this).hasClass('ruler__line--x') ? 'y' : 'x'
+            if (target.length > 0) {
+                var asix = direction === 'x' ? 'left' : 'top'
+                var distance = parseInt(target.css(asix), 10) - parseInt($(this).css(asix), 10)
+                var start
+                if (distance > 0) {
+                    start = parseInt($(this).css(asix), 10)
+                } else {
+                    start = parseInt(target.css(asix), 10)
+                }
+                createDistance(direction, Math.abs(distance), start)
+            }
         })
         $(document).on('mouseout', '.ruler__line--x, .ruler__line--y', function (e) {
+            $('.ruler-distance').remove()
             active = null;
         })
         $(document).on('keyup', (e) => {

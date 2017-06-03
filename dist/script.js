@@ -27138,8 +27138,63 @@ exports.insert = function (css) {
 }
 
 },{}],6:[function(require,module,exports){
-var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".ruler-wrap ul,\n.ruler-wrap li {\n  list-style: none;\n}\n.ruler__help__modal {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 320px;\n  padding: 15px;\n  background: #282828;\n  text-align: left;\n}\n.ruler__help__modal h5 {\n  font-size: 18px;\n  margin-top: 0;\n  margin-bottom: 15px;\n}\n.ruler__help__modal table {\n  width: 100%;\n  font-size: 14px;\n}\n.ruler__help__modal table td {\n  padding: 10px 5px;\n  vertical-align: top;\n}\n.ruler__help__modal table td strong {\n  font-weight: bold;\n  font-style: italic;\n}\n.ruler__help {\n  position: absolute;\n  right: 10px;\n  bottom: 10px;\n  background: #282828;\n  color: #fff;\n  font-size: 28px;\n  width: 48px;\n  height: 48px;\n  line-height: 48px;\n  text-align: center;\n  border-radius: 50%;\n  cursor: pointer;\n}\n.ruler__help:hover {\n  background: #555;\n}\n.ruler__help:active {\n  background: #333;\n}\n.ruler-wrap {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.3);\n  z-index: 10001;\n  color: #fff;\n  font: 12px \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace, \"PingFang SC\", sans-serif;\n  -webkit-font-smoothing: antialiased;\n  user-select: none;\n}\n.ruler-wrap,\n.ruler-wrap > * {\n  box-sizing: content-box;\n}\n.rc_form {\n  margin-bottom: 15px;\n}\n.input--field {\n  margin-bottom: 12px;\n}\n.input--field input {\n  margin-left: 10px;\n  vertical-align: middle;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n}\n.input--field input[type=text] {\n  background-color: #fff;\n  border: 1px solid #ccc;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  transition: border linear 0.2s, box-shadow linear 0.2s;\n  display: inline-block;\n  height: 20px;\n  padding: 4px 6px;\n  font-size: 14px;\n  line-height: 20px;\n  color: #555;\n  vertical-align: middle;\n  border-radius: 4px;\n  width: 96px;\n}\n.input--field input[type=text]:focus {\n  border-color: rgba(82, 168, 236, 0.8);\n  outline: 0;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);\n}\n.ruler__create__buttons {\n  text-align: center;\n}\n.ruler__create__buttons .rc_button {\n  display: inline-block;\n  padding: 2px 10px;\n  margin-bottom: 0;\n  font-size: 11.9px;\n  line-height: 20px;\n  color: #333;\n  text-align: center;\n  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);\n  vertical-align: middle;\n  cursor: pointer;\n  background-color: #f5f5f5;\n  padding: 0 10px;\n  background-image: linear-gradient(to bottom, #fff, #e6e6e6);\n  background-repeat: repeat-x;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}\n.ruler__create__buttons .rc_button:first-child {\n  margin-right: 12px;\n}\n.ruler__create {\n  position: absolute;\n  width: 240px;\n  padding: 12px;\n  background-color: #282828;\n  text-align: left;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n}\n.ruler__create h5 {\n  font-size: 16px;\n  margin-top: 0;\n  margin-bottom: 12px;\n}\n.ruler__tooltip {\n  position: absolute;\n  color: #fff;\n  background-color: #282828;\n  border-radius: 2px;\n  padding: 2px 4px;\n  box-shadow: 1px 1px 3px 1px rgba(40, 40, 40, 0.5);\n}\n.axis-x,\n.axis-y {\n  position: absolute;\n  left: 0;\n  top: 0;\n}\n.axis-x {\n  width: 100%;\n  height: 20px;\n  border-bottom: 1px solid #fff;\n}\n.axis-y {\n  width: 20px;\n  height: 100%;\n  border-right: 1px solid #fff;\n}\n.axis-x__hundred,\n.axis-x__twenty,\n.axis-x__ten {\n  position: absolute;\n  bottom: 0;\n  padding-left: 2px;\n  border-left: 1px solid #fff;\n}\n.axis-y__hundred,\n.axis-y__twenty,\n.axis-y__ten {\n  position: absolute;\n  right: 0;\n  padding-left: 2px;\n  border-top: 1px solid #fff;\n}\n.axis-y__hundred span,\n.axis-y__twenty span,\n.axis-y__ten span {\n  position: absolute;\n  left: 2px;\n  top: 0;\n  width: 1em;\n  word-break: break-all;\n  line-height: 1;\n}\n.axis-x__hundred {\n  height: 100%;\n}\n.axis-x__twenty {\n  height: 8px;\n}\n.axis-x__ten {\n  height: 4px;\n}\n.axis-y__hundred {\n  width: 100%;\n}\n.axis-y__twenty {\n  width: 8px;\n}\n.axis-y__ten {\n  width: 4px;\n}\n.ruler__line {\n  position: absolute;\n  background-color: #4affff;\n}\n.ruler__line--x {\n  height: 1px;\n  width: 100%;\n  left: 0;\n  margin-top: -1px;\n  border-top: 1px solid transparent;\n  border-bottom: 1px solid transparent;\n  background-clip: content-box;\n  cursor: row-resize;\n}\n.ruler__line--y {\n  width: 1px;\n  height: 100%;\n  top: 0;\n  margin-left: -1px;\n  border-left: 1px solid transparent;\n  border-right: 1px solid transparent;\n  background-clip: content-box;\n  cursor: col-resize;\n}\n.ruler-util--hidden {\n  visibility: hidden;\n}\n.ruler__info {\n  position: absolute;\n  right: 0;\n  top: 20%;\n  width: 150px;\n  padding: 0 12px;\n  text-align: left;\n  background-color: #282828;\n}\n.ruler__info li {\n  margin: 10px 0;\n}")
+var __vueify_style_dispose__ = require("vueify/lib/insert-css").insert(".ruler-user-select {\n  user-select: none;\n}\n.ruler-wrap ul,\n.ruler-wrap li {\n  list-style: none;\n}\n.ruler__help__modal {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 320px;\n  padding: 15px;\n  background: #282828;\n  text-align: left;\n}\n.ruler__help__modal h5 {\n  font-size: 18px;\n  margin-top: 0;\n  margin-bottom: 15px;\n}\n.ruler__help__modal table {\n  width: 100%;\n  font-size: 14px;\n}\n.ruler__help__modal table td {\n  padding: 10px 5px;\n  vertical-align: top;\n}\n.ruler__help__modal table td strong {\n  font-weight: bold;\n  font-style: italic;\n}\n.ruler__help {\n  position: absolute;\n  right: 10px;\n  bottom: 10px;\n  background: #282828;\n  color: #fff;\n  font-size: 28px;\n  width: 48px;\n  height: 48px;\n  line-height: 48px;\n  text-align: center;\n  border-radius: 50%;\n  cursor: pointer;\n}\n.ruler__help:hover {\n  background: #555;\n}\n.ruler__help:active {\n  background: #333;\n}\n.ruler-wrap {\n  position: fixed;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(0, 0, 0, 0.3);\n  z-index: 10001;\n  color: #fff;\n  font: 12px \"SFMono-Regular\", Consolas, \"Liberation Mono\", Menlo, Courier, monospace, \"PingFang SC\", sans-serif;\n  -webkit-font-smoothing: antialiased;\n  user-select: none;\n}\n.ruler-wrap,\n.ruler-wrap > * {\n  box-sizing: content-box;\n}\n.rc_form {\n  margin-bottom: 15px;\n}\n.input--field {\n  margin-bottom: 12px;\n}\n.input--field input {\n  margin-left: 10px;\n  vertical-align: middle;\n  font-size: 14px;\n  font-weight: normal;\n  line-height: 20px;\n}\n.input--field input[type=text] {\n  background-color: #fff;\n  border: 1px solid #ccc;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);\n  transition: border linear 0.2s, box-shadow linear 0.2s;\n  display: inline-block;\n  height: 20px;\n  padding: 4px 6px;\n  font-size: 14px;\n  line-height: 20px;\n  color: #555;\n  vertical-align: middle;\n  border-radius: 4px;\n  width: 96px;\n}\n.input--field input[type=text]:focus {\n  border-color: rgba(82, 168, 236, 0.8);\n  outline: 0;\n  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);\n}\n.ruler__create__buttons {\n  text-align: center;\n}\n.ruler__create__buttons .rc_button {\n  display: inline-block;\n  padding: 2px 10px;\n  margin-bottom: 0;\n  font-size: 11.9px;\n  line-height: 20px;\n  color: #333;\n  text-align: center;\n  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);\n  vertical-align: middle;\n  cursor: pointer;\n  background-color: #f5f5f5;\n  padding: 0 10px;\n  background-image: linear-gradient(to bottom, #fff, #e6e6e6);\n  background-repeat: repeat-x;\n  border: 1px solid #ccc;\n  border-radius: 4px;\n}\n.ruler__create__buttons .rc_button:first-child {\n  margin-right: 12px;\n}\n.ruler__create {\n  position: absolute;\n  width: 240px;\n  padding: 12px;\n  background-color: #282828;\n  text-align: left;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%);\n}\n.ruler__create h5 {\n  font-size: 16px;\n  margin-top: 0;\n  margin-bottom: 12px;\n}\n.ruler__tooltip {\n  position: absolute;\n  color: #fff;\n  background-color: #282828;\n  border-radius: 2px;\n  padding: 2px 4px;\n  box-shadow: 1px 1px 3px 1px rgba(40, 40, 40, 0.5);\n}\n.axis-x,\n.axis-y {\n  position: absolute;\n  left: 0;\n  top: 0;\n}\n.axis-x {\n  width: 100%;\n  height: 20px;\n  border-bottom: 1px solid #fff;\n}\n.axis-y {\n  width: 20px;\n  height: 100%;\n  border-right: 1px solid #fff;\n}\n.axis-x__hundred,\n.axis-x__twenty,\n.axis-x__ten {\n  position: absolute;\n  bottom: 0;\n  padding-left: 2px;\n  border-left: 1px solid #fff;\n}\n.axis-y__hundred,\n.axis-y__twenty,\n.axis-y__ten {\n  position: absolute;\n  right: 0;\n  padding-left: 2px;\n  border-top: 1px solid #fff;\n}\n.axis-y__hundred span,\n.axis-y__twenty span,\n.axis-y__ten span {\n  position: absolute;\n  left: 2px;\n  top: 0;\n  width: 1em;\n  word-break: break-all;\n  line-height: 1;\n}\n.axis-x__hundred {\n  height: 100%;\n}\n.axis-x__twenty {\n  height: 8px;\n}\n.axis-x__ten {\n  height: 4px;\n}\n.axis-y__hundred {\n  width: 100%;\n}\n.axis-y__twenty {\n  width: 8px;\n}\n.axis-y__ten {\n  width: 4px;\n}\n.ruler__line {\n  position: absolute;\n  background-color: #4affff;\n  box-sizing: border-box;\n}\n.ruler__line.active {\n  background-color: #E74C3C;\n}\n.ruler__line:before {\n  position: absolute;\n  content: '';\n  width: 24px;\n  height: 24px;\n  background: url('data:image/png;base64,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') no-repeat;\n  background-size: 100%;\n}\n.ruler__line--x {\n  height: 3px;\n  width: 100%;\n  left: 0;\n  margin-top: -1px;\n  border-top: 1px solid transparent;\n  border-bottom: 1px solid transparent;\n  background-clip: content-box;\n  cursor: row-resize;\n  padding: 0 24px 0 20px;\n}\n.ruler__line--x:before {\n  right: 0;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.ruler__line--y {\n  width: 3px;\n  height: 100%;\n  top: 0;\n  margin-left: -1px;\n  border-left: 1px solid transparent;\n  border-right: 1px solid transparent;\n  background-clip: content-box;\n  cursor: col-resize;\n  padding: 20px 0 24px 0;\n}\n.ruler__line--y:before {\n  bottom: 0;\n  left: 50%;\n  transform: translateX(-50%) rotate(-90deg);\n}\n.ruler-util--hidden {\n  visibility: hidden;\n}\n.ruler__info {\n  position: absolute;\n  right: 0;\n  top: 20%;\n  width: 150px;\n  padding: 0 12px;\n  text-align: left;\n  background-color: #282828;\n}\n.ruler__info li {\n  margin: 10px 0;\n}\n.ruler-distance {\n  position: absolute;\n  background-color: #E74C3C;\n}\n.ruler-distance span {\n  position: absolute;\n}\n.ruler-distance--y {\n  width: 1px;\n  left: 50%;\n  transform: translateX(-50%);\n}\n.ruler-distance--y span {\n  position: absolute;\n  top: 50%;\n  transform: translateY(-50%);\n  left: 5px;\n}\n.ruler-distance--x {\n  height: 1px;\n  top: 50%;\n  transform: translateY(-50%);\n}\n.ruler-distance--x span {\n  position: absolute;\n  left: 50%;\n  transform: translateX(-50%);\n  top: 5px;\n}")
 ;(function(){
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -27622,11 +27677,74 @@ module.exports = {
             lineY = $(this)
             dragY = true
         })
+        var startCoordinate
+        var endCoordinate
+        $(document).on('mousedown', '.ruler__line', function (e) {
+            $('.ruler__line').removeClass('active')
+            startCoordinate = {
+                x: e.pageX,
+                y: e.pageY
+            }
+        })
+        $(document).on('mouseup', '.ruler__line', function (e) {
+            endCoordinate = {
+                x: e.pageX,
+                y: e.pageY
+            }
+        })
+        function distance (a, b) {
+            return a.x - b.x === 0 && a.y - b.y === 0
+        }
+        // click
+        function createDistance (direction, distance, start) {
+            $('.ruler-distance').remove()
+            var directionClass = direction === 'x' ? 'ruler-distance--x' : 'ruler-distance--y'
+            var css = {}
+            if (direction === 'x') {
+                css.width = distance + 'px'
+                css.left = start + 'px'
+            } else {
+                css.height = distance + 'px'
+                css.top = start + 'px'
+            }
+            var ele = $('<div>').addClass('ruler-distance')
+                .addClass(directionClass)
+                .html('<span>' + distance + 'px' + '</span>')
+                .css(css)
+            $('.ruler-wrap').append(ele);
+        }
+        $(document).on('click', '.ruler__line', function (e) {
+            if (distance(startCoordinate, endCoordinate)) {
+                e.stopPropagation();
+                $('.ruler__line').removeClass('active')
+                $(this).addClass('active')
+            }
+        })
+        $(document).on('click', function (e) {
+            $('.ruler__line').removeClass('active')
+        })
         var active
         $(document).on('mouseover', '.ruler__line--x, .ruler__line--y', function (e) {
             active = $(this);
+            if (drag || dragY) {
+                return;
+            }
+            var target = $('.ruler__line.active')
+            var direction = $(this).hasClass('ruler__line--x') ? 'y' : 'x'
+            if (target.length > 0) {
+                var asix = direction === 'x' ? 'left' : 'top'
+                var distance = parseInt(target.css(asix), 10) - parseInt($(this).css(asix), 10)
+                var start
+                if (distance > 0) {
+                    start = parseInt($(this).css(asix), 10)
+                } else {
+                    start = parseInt(target.css(asix), 10)
+                }
+                createDistance(direction, Math.abs(distance), start)
+            }
         })
         $(document).on('mouseout', '.ruler__line--x, .ruler__line--y', function (e) {
+            $('.ruler-distance').remove()
             active = null;
         })
         $(document).on('keyup', (e) => {
@@ -27677,7 +27795,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ruler-wrap"},[_c('div',{staticClass:"axis-x"}),_c('div',{staticClass:"axis-y"}),_c('div',{staticClass:"ruler__help",on:{"click":function($event){_vm.help.show = !_vm.help.show}}},[_vm._v("?")]),_c('div',{staticClass:"ruler__tooltip ruler-util--hidden"}),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.create.show),expression:"create.show"}],staticClass:"ruler__create"},[_c('h5',[_vm._v("Create a line")]),_c('div',{staticClass:"rc_form"},[_c('div',{staticClass:"input--field"},[_c('label',[_vm._v("Horizontal"),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.create.asix),expression:"create.asix"}],attrs:{"type":"radio","name":"asix","value":"x"},domProps:{"checked":_vm._q(_vm.create.asix,"x")},on:{"__c":function($event){_vm.create.asix="x"}}})])]),_c('div',{staticClass:"input--field"},[_c('label',[_vm._v("Vertical"),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.create.asix),expression:"create.asix"}],attrs:{"type":"radio","name":"asix","value":"y"},domProps:{"checked":_vm._q(_vm.create.asix,"y")},on:{"__c":function($event){_vm.create.asix="y"}}})])]),_c('div',{staticClass:"input--field"},[_c('label',[_vm._v("Position"),_c('input',{directives:[{name:"model",rawName:"v-model.number",value:(_vm.create.value),expression:"create.value",modifiers:{"number":true}}],attrs:{"type":"text"},domProps:{"value":(_vm.create.value)},on:{"input":function($event){if($event.target.composing){ return; }_vm.create.value=_vm._n($event.target.value)},"blur":function($event){_vm.$forceUpdate()}}})])])]),_c('div',{staticClass:"ruler__create__buttons"},[_c('div',{staticClass:"rc_button",on:{"click":_vm.createLine}},[_vm._v("submit")]),_c('div',{staticClass:"rc_button",on:{"click":_vm.cancle}},[_vm._v("cancle")])])]),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.info.show),expression:"info.show"}],staticClass:"ruler__info"},[_c('ul',[_c('li',[_vm._v(" X: "+_vm._s(_vm.mouse.pageX))]),_c('li',[_vm._v(" Y: "+_vm._s(_vm.mouse.pageY))]),_c('li',[_vm._v("clientX: "+_vm._s(_vm.mouse.clientX))]),_c('li',[_vm._v("clientY: "+_vm._s(_vm.mouse.clientY))]),_c('li',[_vm._v("scrollTop: "+_vm._s(_vm.scrollTop))]),_c('li',[_vm._v("W: "+_vm._s(_vm.window.width))]),_c('li',[_vm._v("H: "+_vm._s(_vm.window.height))])])]),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.help.show),expression:"help.show"}],staticClass:"ruler__help__modal"},[_c('h5',[_vm._v("The keymaps")]),_vm._m(0)])])}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('table',[_c('tr',[_c('th',[_vm._v("KEYMAP")]),_c('th',[_vm._v("DESCRIPTION")])]),_c('tr',[_c('td',[_vm._v("N")]),_c('td',[_vm._v("Create a "),_c('strong',[_vm._v("new")]),_vm._v(" line")])]),_c('tr',[_c('td',[_vm._v("I")]),_c('td',[_c('strong',[_vm._v("Info")])])]),_c('tr',[_c('td',[_vm._v("Delete")]),_c('td',[_c('strong',[_vm._v("Delete")]),_vm._v(" the line which is mouseover")])]),_c('tr',[_c('td',[_vm._v("H")]),_c('td',[_c('strong',[_vm._v("Hide")]),_vm._v(" all line")])]),_c('tr',[_c('td',[_vm._v("C")]),_c('td',[_c('strong',[_vm._v("Clean")]),_vm._v(" all line")])])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('table',[_c('tr',[_c('th',[_vm._v("KEYMAP")]),_c('th',[_vm._v("DESCRIPTION")])]),_c('tr',[_c('td',[_vm._v("N")]),_c('td',[_vm._v("Create a "),_c('strong',[_vm._v("new")]),_vm._v(" line")])]),_c('tr',[_c('td',[_vm._v("I")]),_c('td',[_c('strong',[_vm._v("Info")])])]),_c('tr',[_c('td',[_vm._v("Delete")]),_c('td',[_c('strong',[_vm._v("Delete")]),_vm._v(" the line which is mouseover")])]),_c('tr',[_c('td',[_vm._v("H")]),_c('td',[_c('strong',[_vm._v("Hide")]),_vm._v(" all lines")])]),_c('tr',[_c('td',[_vm._v("C")]),_c('td',[_c('strong',[_vm._v("Clean")]),_vm._v(" all lines")])])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -27686,7 +27804,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-14f081ec", __vue__options__)
   } else {
-    hotAPI.reload("data-v-14f081ec", __vue__options__)
+    hotAPI.rerender("data-v-14f081ec", __vue__options__)
   }
 })()}
 },{"./jquery-3.2.1.min":7,"lodash":1,"vue":4,"vue-hot-reload-api":3,"vueify/lib/insert-css":5}],7:[function(require,module,exports){
@@ -27701,7 +27819,9 @@ var $ = require('./jquery-3.2.1.min')
 var App = require('./App.vue')
 if ($('.ruler-wrap').length > 0) {
   $('.ruler-wrap').remove()
+  $('body').removeClass('ruler-user-select')
 } else {
+  $('body').addClass('ruler-user-select')
   $('body').append('<div id="ruler"></div>')
   document.activeElement.blur();
   new Vue({
