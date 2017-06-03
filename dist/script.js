@@ -27713,19 +27713,19 @@ module.exports = {
                 .css(css)
             $('.ruler-wrap').append(ele);
         }
+        var active
         $(document).on('click', '.ruler__line', function (e) {
             if (distance(startCoordinate, endCoordinate)) {
                 e.stopPropagation();
                 $('.ruler__line').removeClass('active')
                 $(this).addClass('active')
+                active = $(this)
             }
         })
         $(document).on('click', function (e) {
             $('.ruler__line').removeClass('active')
         })
-        var active
         $(document).on('mouseover', '.ruler__line--x, .ruler__line--y', function (e) {
-            active = $(this);
             if (drag || dragY) {
                 return;
             }
@@ -27745,7 +27745,6 @@ module.exports = {
         })
         $(document).on('mouseout', '.ruler__line--x, .ruler__line--y', function (e) {
             $('.ruler-distance').remove()
-            active = null;
         })
         $(document).on('keyup', (e) => {
             if (e.which === 78) {
@@ -27795,7 +27794,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"ruler-wrap"},[_c('div',{staticClass:"axis-x"}),_c('div',{staticClass:"axis-y"}),_c('div',{staticClass:"ruler__help",on:{"click":function($event){_vm.help.show = !_vm.help.show}}},[_vm._v("?")]),_c('div',{staticClass:"ruler__tooltip ruler-util--hidden"}),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.create.show),expression:"create.show"}],staticClass:"ruler__create"},[_c('h5',[_vm._v("Create a line")]),_c('div',{staticClass:"rc_form"},[_c('div',{staticClass:"input--field"},[_c('label',[_vm._v("Horizontal"),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.create.asix),expression:"create.asix"}],attrs:{"type":"radio","name":"asix","value":"x"},domProps:{"checked":_vm._q(_vm.create.asix,"x")},on:{"__c":function($event){_vm.create.asix="x"}}})])]),_c('div',{staticClass:"input--field"},[_c('label',[_vm._v("Vertical"),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.create.asix),expression:"create.asix"}],attrs:{"type":"radio","name":"asix","value":"y"},domProps:{"checked":_vm._q(_vm.create.asix,"y")},on:{"__c":function($event){_vm.create.asix="y"}}})])]),_c('div',{staticClass:"input--field"},[_c('label',[_vm._v("Position"),_c('input',{directives:[{name:"model",rawName:"v-model.number",value:(_vm.create.value),expression:"create.value",modifiers:{"number":true}}],attrs:{"type":"text"},domProps:{"value":(_vm.create.value)},on:{"input":function($event){if($event.target.composing){ return; }_vm.create.value=_vm._n($event.target.value)},"blur":function($event){_vm.$forceUpdate()}}})])])]),_c('div',{staticClass:"ruler__create__buttons"},[_c('div',{staticClass:"rc_button",on:{"click":_vm.createLine}},[_vm._v("submit")]),_c('div',{staticClass:"rc_button",on:{"click":_vm.cancle}},[_vm._v("cancle")])])]),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.info.show),expression:"info.show"}],staticClass:"ruler__info"},[_c('ul',[_c('li',[_vm._v(" X: "+_vm._s(_vm.mouse.pageX))]),_c('li',[_vm._v(" Y: "+_vm._s(_vm.mouse.pageY))]),_c('li',[_vm._v("clientX: "+_vm._s(_vm.mouse.clientX))]),_c('li',[_vm._v("clientY: "+_vm._s(_vm.mouse.clientY))]),_c('li',[_vm._v("scrollTop: "+_vm._s(_vm.scrollTop))]),_c('li',[_vm._v("W: "+_vm._s(_vm.window.width))]),_c('li',[_vm._v("H: "+_vm._s(_vm.window.height))])])]),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.help.show),expression:"help.show"}],staticClass:"ruler__help__modal"},[_c('h5',[_vm._v("The keymaps")]),_vm._m(0)])])}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('table',[_c('tr',[_c('th',[_vm._v("KEYMAP")]),_c('th',[_vm._v("DESCRIPTION")])]),_c('tr',[_c('td',[_vm._v("N")]),_c('td',[_vm._v("Create a "),_c('strong',[_vm._v("new")]),_vm._v(" line")])]),_c('tr',[_c('td',[_vm._v("I")]),_c('td',[_c('strong',[_vm._v("Info")])])]),_c('tr',[_c('td',[_vm._v("Delete")]),_c('td',[_c('strong',[_vm._v("Delete")]),_vm._v(" the line which is mouseover")])]),_c('tr',[_c('td',[_vm._v("H")]),_c('td',[_c('strong',[_vm._v("Hide")]),_vm._v(" all lines")])]),_c('tr',[_c('td',[_vm._v("C")]),_c('td',[_c('strong',[_vm._v("Clean")]),_vm._v(" all lines")])])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('table',[_c('tr',[_c('th',[_vm._v("KEYMAP")]),_c('th',[_vm._v("DESCRIPTION")])]),_c('tr',[_c('td',[_vm._v("N")]),_c('td',[_vm._v("Create a "),_c('strong',[_vm._v("new")]),_vm._v(" line")])]),_c('tr',[_c('td',[_vm._v("I")]),_c('td',[_c('strong',[_vm._v("Info")])])]),_c('tr',[_c('td',[_vm._v("Delete")]),_c('td',[_c('strong',[_vm._v("Delete")]),_vm._v(" the line which is selected")])]),_c('tr',[_c('td',[_vm._v("H")]),_c('td',[_c('strong',[_vm._v("Hide")]),_vm._v(" all lines")])]),_c('tr',[_c('td',[_vm._v("C")]),_c('td',[_c('strong',[_vm._v("Clean")]),_vm._v(" all lines")])])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return

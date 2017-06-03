@@ -47,7 +47,7 @@
                     td Delete
                     td 
                         strong Delete
-                        |  the line which is mouseover
+                        |  the line which is selected
                 tr
                     td H
                     td 
@@ -571,19 +571,19 @@ module.exports = {
                 .css(css)
             $('.ruler-wrap').append(ele);
         }
+        var active
         $(document).on('click', '.ruler__line', function (e) {
             if (distance(startCoordinate, endCoordinate)) {
                 e.stopPropagation();
                 $('.ruler__line').removeClass('active')
                 $(this).addClass('active')
+                active = $(this)
             }
         })
         $(document).on('click', function (e) {
             $('.ruler__line').removeClass('active')
         })
-        var active
         $(document).on('mouseover', '.ruler__line--x, .ruler__line--y', function (e) {
-            active = $(this);
             if (drag || dragY) {
                 return;
             }
@@ -603,7 +603,6 @@ module.exports = {
         })
         $(document).on('mouseout', '.ruler__line--x, .ruler__line--y', function (e) {
             $('.ruler-distance').remove()
-            active = null;
         })
         $(document).on('keyup', (e) => {
             if (e.which === 78) {
